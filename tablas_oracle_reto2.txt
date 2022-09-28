@@ -1,0 +1,86 @@
+https://g053dfc580fb2c9-sa91btkwpf7l88b2.adb.us-phoenix-1.oraclecloudapps.com
+
+**creación de tabla**
+
+CREATE TABLE CLIENT (
+    ID NUMBER(10) NOT NULL,
+    NAME VARCHAR2(4000) NULL,
+    EMAIL VARCHAR2(100) NULL,
+    AGE NUMBER(10) NULL,
+    PRIMARY KEY (ID));
+
+CREATE SEQUENCE  client_seq START WITH 1 INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER client_seq_trig BEFORE INSERT ON client FOR EACH ROW WHEN (NEW.ID IS NULL)
+BEGIN
+    SELECT client_seq.NEXTVAL INTO :NEW.ID FROM DUAL;
+END;
+
+**GET**
+SELECT * FROM CLIENT
+
+**PUT**
+BEGIN
+    UPDATE CLIENT
+    SET
+    EMAIL = :email,
+    AGE = :age,
+    NAME = :name
+    WHERE ID = :id;
+    :status_code := 201;
+END;
+
+**POST**
+BEGIN
+    INSERT INTO CLIENT(ID, NAME, EMAIL, AGE)
+    VALUES(:id, :name, :email, :age);
+    :status_code := 201;
+END;
+
+**DELETE**
+
+BEGIN
+    DELETE FROM CLIENT
+    WHERE ID = :id;
+    :status_code := 204;
+END;
+
+**Tabla Mensajes**
+
+CREATE TABLE MESSAGE (
+    ID NUMBER(10) NOT NULL,
+    MESSAGETEXT VARCHAR2(4000) NULL,
+    PRIMARY KEY (ID));
+
+**GET**
+SELECT * FROM MESSAGE
+
+**PUT**
+BEGIN
+    UPDATE MESSAGE  SET MESSAGETEXT = :messagetext
+    WHERE ID = :id;
+    :status_code := 201;
+END;
+
+**POST**
+BEGIN
+    INSERT INTO CLIENT(ID, NAME, EMAIL, AGE)
+    VALUES(:id, :name, :email, :age);
+    :status_code := 201;
+END;
+
+**DELETE**
+
+BEGIN
+    DELETE FROM CLIENT
+    WHERE ID = :id;
+    :status_code := 204;
+END;
+
+**GETmessage/:id ** // se crea una nueva plantilla con el nombre message:id
+
+SELECT * FROM MESSAGE
+WHERE ID = :id
+
+
+
