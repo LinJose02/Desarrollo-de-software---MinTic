@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Reto3G6Application {
+public class Reto3G3Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Reto3G6Application.class, args);
+		SpringApplication.run(Reto3G3Application.class, args);
 	}
 
 }
