@@ -1,0 +1,128 @@
+ul {
+    list-style-type: none;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+div {
+    width: 80%;
+    border: 5px solid rgb(76, 74, 77);
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.label_nombre{
+    border-radius: 8px;
+    width: 50%;
+    border: 2px solid rgb(76, 74, 77);
+    padding: 20px;
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.label_message{
+    border-radius: 8px;
+    width: 80%;
+    border: 2px solid rgb(76, 74, 77);
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5%;
+}
+
+.label_nombre {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+
+.label_nombre label{
+    padding: 2px;
+    padding-left: 10px;
+
+}
+
+.label_message label{
+    padding: 10px ;
+    font-family: 'Courier New', Courier, monospace;
+}
+button {
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    background-color: rgb(76, 74, 77);
+    color: aliceblue;
+    padding: 5px;
+    margin: 10px;
+    
+}
+
+textarea {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(76, 74, 77);
+}
+
+input {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(76, 74, 77);
+    border-radius: 5px;
+    width: 100%;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    margin: 0;
+}
+
+.active{
+    background-color: rgb(255, 255, 255);
+    color: #111;
+
+}
+.active:hover{
+    background-color: #111;
+    color: aliceblue;
+}
